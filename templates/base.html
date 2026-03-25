@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интеркултурна Прагматика</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'mk',
+            includedLanguages: 'en',
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+
+<!-- Hidden Google Translate widget -->
+<div id="google_translate_element" style="display:none"></div>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="{{ url_for('index') }}" class="logo-area">
+            <div class="logo-icon">IP</div>
+            <div class="logo-text">
+                <span class="logo-title">Интеркултурна Прагматика</span>
+                <span class="logo-sub">Истражувачки проект</span>
+            </div>
+        </a>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="{{ url_for('index') }}" class="nav-link {% if request.endpoint == 'index' %}active{% endif %}">ДОМА</a></li>
+                <li><a href="{{ url_for('tim') }}" class="nav-link {% if request.endpoint == 'tim' %}active{% endif %}">ТИМ</a></li>
+                <li><a href="{{ url_for('istrazuvanje') }}" class="nav-link {% if request.endpoint == 'istrazuvanje' %}active{% endif %}">ИСТРАЖУВАЊЕ</a></li>
+                <li class="has-dropdown">
+                    <a href="{{ url_for('materijali') }}" class="nav-link {% if request.endpoint == 'materijali' %}active{% endif %}">МАТЕРИЈАЛИ &#9660;</a>
+                    <ul class="dropdown">
+                        <li><a href="{{ url_for('materijali') }}#moduli">Модули</a></li>
+                        <li><a href="{{ url_for('materijali') }}#prezentacii">Презентации</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('konferencija') }}" class="nav-link {% if request.endpoint == 'konferencija' %}active{% endif %}">КОНФЕРЕНЦИЈА</a></li>
+                <li><a href="{{ url_for('vesti') }}" class="nav-link {% if request.endpoint == 'vesti' %}active{% endif %}">ВЕСТИ</a></li>
+                <li><a href="{{ url_for('kontakt') }}" class="nav-link {% if request.endpoint == 'kontakt' %}active{% endif %}">КОНТАКТ</a></li>
+                <li><a href="{{ url_for('linkovi') }}" class="nav-link {% if request.endpoint == 'linkovi' %}active{% endif %}">ЛИНКОВИ</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="lang-toggle" id="langToggle">EN</button>
+            <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-copy">© 2026 Интеркултурна Прагматика — Сите права се задржани.</p>
+        <p class="footer-credit">
+            Веб-страницата е изработена од
+            <a href="https://www.linkedin.com/in/hana-hasanicaj/" target="_blank" rel="noopener">Hana Hasanicaj</a>
+            и
+            <a href="https://www.linkedin.com/in/vladimir-ivanovski-123b79198/" target="_blank" rel="noopener">Vladimir Ivanovski</a>
+        </p>
+    </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lbClose">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lbPrev">&#8249;</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lightbox-nav lightbox-next" id="lbNext">&#8250;</button>
+    <span class="lightbox-counter" id="lbCounter"></span>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

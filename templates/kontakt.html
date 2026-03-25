@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title" data-mk="КОНТАКТ" data-en="CONTACT">КОНТАКТ</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="contact-layout">
+
+            <!-- LEFT: Info -->
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">&#9993;</div>
+                    <div>
+                        <h3 data-mk="Е-ПОШТА" data-en="E-MAIL">Е-ПОШТА</h3>
+                        <a href="mailto:biljana.ivanovska@ugd.edu.mk">biljana.ivanovska@ugd.edu.mk</a>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">&#128205;</div>
+                    <div>
+                        <h3 data-mk="АДРЕСА" data-en="ADDRESS">АДРЕСА</h3>
+                        <p data-mk="Универзитет „Гоце Делчев" — Штип" data-en="Goce Delchev University — Shtip">Универзитет „Гоце Делчев" — Штип</p>
+                        <p data-mk="Македонија" data-en="Macedonia">Македонија</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Form -->
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="fname" name="name" required placeholder=" ">
+                        <label for="fname" data-mk="Ime" data-en="Name">Ime</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="femail" name="email" required placeholder=" ">
+                        <label for="femail" data-mk="Е-пошта" data-en="E-mail">Е-пошта</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="fsubject" name="subject" required placeholder=" ">
+                    <label for="fsubject" data-mk="Предмет" data-en="Subject">Предмет</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="fmessage" name="message" rows="6" required placeholder=" "></textarea>
+                    <label for="fmessage" data-mk="Порака" data-en="Message">Порака</label>
+                </div>
+                <button type="submit" class="form-submit" data-mk="Испрати" data-en="Send">Испрати</button>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name    = document.getElementById('fname').value.trim();
+    const email   = document.getElementById('femail').value.trim();
+    const subject = document.getElementById('fsubject').value.trim();
+    const message = document.getElementById('fmessage').value.trim();
+
+    if (!name || !email || !subject || !message) return;
+
+    const body = `Од: ${name} <${email}>\n\n${message}`;
+    const mailto = `mailto:biljana.ivanovska@ugd.edu.mk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+});
+</script>
+
+{% endblock %}

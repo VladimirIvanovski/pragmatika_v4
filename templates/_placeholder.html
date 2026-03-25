@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title" data-mk="{{ title_mk }}" data-en="{{ title_en }}">{{ title_mk }}</h1>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="placeholder-block">
+            <div class="placeholder-icon">{{ icon }}</div>
+            <p data-mk="{{ msg_mk }}" data-en="{{ msg_en }}">{{ msg_mk }}</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

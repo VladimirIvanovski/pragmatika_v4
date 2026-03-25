@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title">ТИМ</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="team-grid">
+
+            <!-- 1. Билјана Ивановска -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/biljana_ivanovska.jpg') }}"
+                         alt="Билјана Ивановска"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">проф. д-р Билјана Ивановска</h3>
+                <p class="team-role">Раководител на проектот</p>
+                <p class="team-bio">Билјана Ивановска е редовен професор и раководител на Катедрата за германски јазик и книжевност на Филолошкиот факултет при Универзитетот „Гоце Делчев" – Штип, Северна Македонија. Таа предава предмети од областа на контрастивна лингвистика, морфологија, фонетика, германски како странски јазик и прагматика. Нејзините истражувачки интереси вклучуваат: контрастивна анализа, прагматика, германска лингвистика, интеркултурна комуникација, дискурсна анализа, како и теми од областа на усвојувањето на германскиот како странски јазик.</p>
+                </div>
+            </div>
+
+            <!-- 2. Гзим Џафери -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/gzim_xhaferri.jpg') }}"
+                         alt="Гзим Џафери"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">проф. д-р Гзим Џафери</h3>
+                <p class="team-role">Универзитет на Југоисточна Европа — Тетово</p>
+                <p class="team-bio">Гзим Џафери од 2013 година е редовен професор по германска лингвистика на Катедрата за германски јазик при Универзитетот на Југоисточна Европа во Тетово. Неговите истражувачки интереси опфаќаат: синтакса, морфологија, контрастивна лингвистика, прагматика, повеќејазичност, јазична политика и германски како странски јазик. Посебен акцент става на поврзувањето на теоретските пристапи со дидактичките прашања во наставата по германски.</p>
+                </div>
+            </div>
+
+            <!-- 3. Брикена Џафери -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/brikena_xhaferi.jpg') }}"
+                         alt="Брикена Џафери"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">проф. д-р Брикена Џафери</h3>
+                <p class="team-role">Универзитет на Југоисточна Европа</p>
+                <p class="team-bio">Брикена Џафери е редовен професор по применета лингвистика на Факултетот за јазици, култури и комуникација при Универзитетот на Југоисточна Европа. Нејзините истражувачки интереси вклучуваат настава и учење на англиски, дигитализација во образованието, повеќејазичност, прагматика и усвојување на втор јазик. Рецензент е во повеќе национални и меѓународни научни списанија.</p>
+                </div>
+            </div>
+
+            <!-- 4. Марија Леонтиќ -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/marija_leontic.jpg') }}"
+                         alt="Марија Леонтиќ"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">проф. д-р Марија Леонтиќ</h3>
+                <p class="team-role">Катедра за турски јазик и книжевност — УГД Штип</p>
+                <p class="team-bio">Марија Леонтиќ е редовен професор на Катедрата за турски јазик и книжевност при Универзитетот „Гоце Делчев" – Штип. Предава предмети од турска лингвистика, контрастивна граматика и преведување. Нејзините истражувачки интереси опфаќаат турска лингвистика, усвојување на турскиот јазик, контрастивна турско-македонска граматика и прагматика.</p>
+                </div>
+            </div>
+
+            <!-- 5. Натка Јанкова Алаѓозовска -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/natka_jankova.jpg') }}"
+                         alt="Натка Јанкова Алаѓозовска"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">доц. д-р Натка Јанкова Алаѓозовска</h3>
+                <p class="team-role">Раководител на Катедра за англиски јазик — УГД Штип</p>
+                <p class="team-bio">Натка Јанкова Алаѓозовска е вонреден професор на Филолошкиот факултет при УГД и раководител на Катедрата за англиски јазик. Нејзиното истражување се фокусира на интеркултурна комуникативна компетенција и теоретска лингвистика. Докторирала на компаративна студија за когнитивноста на интеркултурната комуникациска компетенција.</p>
+                </div>
+            </div>
+
+            <!-- 6. Сашка Јовановска -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/sashka_jovanovska.jpg') }}"
+                         alt="Сашка Јовановска"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">доц. д-р Сашка Јовановска</h3>
+                <p class="team-role">Катедра за англиски јазик — УГД Штип</p>
+                <p class="team-bio">Сашка Јовановска е вонреден професор на Катедрата за англиски јазик при Филолошкиот факултет, УГД – Штип. Предава Синтакса, Семантика, Социолингвистика и Текстуална лингвистика. Рецензент е и член на уредувачки одбори на четири меѓународни научни списанија. Автор на бројни трудови, монографија и два универзитетски учебници по лингвистика.</p>
+                </div>
+            </div>
+
+            <!-- 7. Ана Коцева -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/ana_koceva.jpg') }}"
+                         alt="Ана Коцева"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">доц. д-р Ана Коцева</h3>
+                <p class="team-role">Катедра за англиски јазик — УГД Штип</p>
+                <p class="team-bio">Ана Коцева е доктор по англиски јазик и доцент на Филолошкиот факултет при УГД – Штип. Предава Контрастивна анализа, Прагматика и Академско пишување. Нејзините истражувачки интереси се во областа на контрастивната прагматика и дискурсната анализа. Учествувала на бројни меѓународни конференции.</p>
+                </div>
+            </div>
+
+            <!-- 8. Марија Гркова-Беадер -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/marija_grkova.jpg') }}"
+                         alt="Марија Гркова-Беадер"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">доц. д-р Марија Гркова-Беадер</h3>
+                <p class="team-role">Катедра за македонски јазик — УГД Штип</p>
+                <p class="team-bio">Марија Гркова-Беадер е вонреден професор на Катедрата за македонски јазик и книжевност при Филолошкиот факултет, УГД – Штип. Предава Современ македонски јазик и Морфологија. Нејзин главен истражувачки интерес се правописните отстапувања и македонски јазик како странски.</p>
+                </div>
+            </div>
+
+            <!-- 9. Симона Серафимовска -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/simona_serafimovska.jpg') }}"
+                         alt="Симона Серафимовска"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">доц. д-р Симона Серафимовска</h3>
+                <p class="team-role">Филолошки факултет — УГД Штип</p>
+                <p class="team-bio">Симона Серафимовска е доцент на Филолошкиот факултет при УГД – Штип. Активно учествува во активностите на проектот, вклучувајќи работилници за интеркултурна прагматика одржани на Кампус 4 во Штип и на Универзитетот на Југоисточна Европа во Скопје.</p>
+                </div>
+            </div>
+
+            <!-- 10. Александра Минкова -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/aleksandra_minkova.jpg') }}"
+                         alt="Александра Минкова"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">Александра Минкова</h3>
+                <p class="team-role">Наставник по германски јазик — Струмица</p>
+                <p class="team-bio">Александра Минкова е наставник по германски јазик во СОУ „Јане Сандански" во Струмица и магистрант по германска лингвистика. Нејзините академски интереси вклучуваат прагматика, модални глаголи, дискурсна анализа и настава по германски јазик. Истражува семантичко значење и прагматични функции на модалните глаголи во германскиот јазик.</p>
+                </div>
+            </div>
+
+            <!-- 11. Катерина Харбова -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/katerina_harbova.jpg') }}"
+                         alt="Катерина Харбова"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">Катерина Харбова</h3>
+                <p class="team-role">Основач на Школа „Харбова" — Штип</p>
+                <p class="team-bio">Катерина Харбова е наставник по германски јазик со повеќе од десет години искуство и основач на приватното училиште „Харбова" во Штип. Работи на магистерски труд за германските предлози. Работи и како овластен судски преведувач по германски јазик.</p>
+                </div>
+            </div>
+
+            <!-- 12. Хана Хасаницај -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/hana_hasanicaj.jpg') }}"
+                         alt="Хана Хасаницај"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">Хана Хасаницај</h3>
+                <p class="team-role">Софтверски инженер — Скопје</p>
+                <p class="team-bio">Хана Хасаницај е софтверски инженер која работи за фармацевтска компанија во Скопје. Има искуство како лабораториски асистент на Факултетот за компјутерски науки и инженерство каде моментално го продолжува своето магистерско образование на насоката „Наука за податоци". Нејзините интереси вклучуваат инженерство на податоци, анализа и машинско учење.</p>
+                </div>
+            </div>
+
+            <!-- 13. Марица Тасевска -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/marica_tasevska.jpg') }}"
+                         alt="Марица Тасевска"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">Марица Тасевска</h3>
+                <p class="team-role">Виш лектор по германски јазик — УГД Штип</p>
+                <p class="team-bio">Марица Тасевска е виш лектор на Филолошкиот факултет при УГД – Штип. Предава Современ германски јазик и Методика на наставата по германски. Активно се занимава со научно-истражувачка работа и учествувала во повеќе меѓународни проекти. Во нејзиното портфолио е и обука за наставници по германски одржана во Виена.</p>
+                </div>
+            </div>
+
+            <!-- 14. Ева Ѓорѓиевска -->
+            <div class="team-card">
+                <div class="team-photo-wrap">
+                    <img src="{{ url_for('static', filename='images/team/eva_gjorgjievska.jpg') }}"
+                         alt="Ева Ѓорѓиевска"
+                         onerror="this.src='{{ url_for('static', filename='images/team/placeholder.svg') }}'">
+                </div>
+                <div class="team-card-body">
+                <h3 class="team-name">проф. д-р Ева Ѓорѓиевска</h3>
+                <p class="team-role">Катедра за француски јазик — УГД Штип</p>
+                <p class="team-bio">Ева Ѓорѓиевска е редовен професор по француски јазик и компаративна книжевност при УГД – Штип. Докторирала на државниот универзитет во Париз на тема од француската книжевност. Нејзините понови истражувања се фокусирани на прагматиката на говорните чинови во дискурсот на современите книжевни автори.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
