@@ -10,7 +10,7 @@
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
             pageLanguage: 'mk',
-            includedLanguages: 'en',
+            includedLanguages: 'en,sq,de',
             autoDisplay: false
         }, 'google_translate_element');
     }
@@ -41,16 +41,24 @@
                     <ul class="dropdown">
                         <li><a href="{{ url_for('materijali') }}#moduli">Модули</a></li>
                         <li><a href="{{ url_for('materijali') }}#prezentacii">Презентации</a></li>
+                        <li><a href="{{ url_for('materijali') }}#korpus">Корпус за анализа</a></li>
                     </ul>
                 </li>
                 <li><a href="{{ url_for('konferencija') }}" class="nav-link {% if request.endpoint == 'konferencija' %}active{% endif %}">КОНФЕРЕНЦИЈА</a></li>
-                <li><a href="{{ url_for('vesti') }}" class="nav-link {% if request.endpoint == 'vesti' %}active{% endif %}">ВЕСТИ</a></li>
                 <li><a href="{{ url_for('kontakt') }}" class="nav-link {% if request.endpoint == 'kontakt' %}active{% endif %}">КОНТАКТ</a></li>
                 <li><a href="{{ url_for('linkovi') }}" class="nav-link {% if request.endpoint == 'linkovi' %}active{% endif %}">ЛИНКОВИ</a></li>
             </ul>
         </nav>
         <div class="header-actions">
-            <button class="lang-toggle" id="langToggle">EN</button>
+            <div class="lang-dropdown" id="langDropdownWrap">
+                <button class="lang-toggle" id="langToggle">МК &#9660;</button>
+                <ul class="lang-options" id="langOptions">
+                    <li data-lang="">МК</li>
+                    <li data-lang="en">EN</li>
+                    <li data-lang="sq">SQ</li>
+                    <li data-lang="de">DE</li>
+                </ul>
+            </div>
             <button class="menu-toggle" id="menuToggle">&#9776;</button>
         </div>
     </div>

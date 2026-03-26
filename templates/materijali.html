@@ -263,4 +263,62 @@
     </div>
 </section>
 
+
+<!-- KORPUS ZA ANALIZA -->
+<section class="section" id="korpus">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-icon">&#9670;</span>
+            <h2>КОРПУС ЗА АНАЛИЗА</h2>
+        </div>
+        <hr class="section-rule">
+
+        <!-- Download -->
+        <ul class="file-list" style="margin-bottom:2rem;">
+            <li class="file-item">
+                <div class="file-icon">&#128209;</div>
+                <div class="file-info">
+                    <span class="file-name">Прашалник — Стратегии за жалба во академска комуникација</span>
+                    <span class="file-meta">.docx</span>
+                </div>
+                <a href="https://drive.google.com/uc?export=download&id=1hcFdTLvUpvVHkZDfk6LRDi0ORbUuq0cg" class="file-download" target="_blank" rel="noopener">
+                    <span class="dl-icon">&#11123;</span>
+                    Преземи
+                </a>
+            </li>
+        </ul>
+
+        <!-- Screenshot gallery -->
+        <p style="color:var(--navy);font-weight:600;margin-bottom:1rem;">Преглед на прашалникот:</p>
+        <div class="analiza-gallery">
+            {% set analiza_imgs = [
+                'images/analiza_sliki/analiza_1.png',
+                'images/analiza_sliki/analiza_2.png',
+                'images/analiza_sliki/analiza_3.png',
+                'images/analiza_sliki/analiza_4.png',
+                'images/analiza_sliki/analiza_5.png',
+                'images/analiza_sliki/analiza_6.png'
+            ] %}
+            {% for img in analiza_imgs %}
+            <img src="{{ url_for('static', filename=img) }}"
+                 alt="Прашалник {{ loop.index }}"
+                 class="analiza-thumb lb-trigger"
+                 data-group="analiza">
+            {% endfor %}
+        </div>
+
+        <!-- Poll link -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-kJTIULIQl15jXpTEn_22K7JUBR40vSJAyugSKcVcOc-hNQ/viewform"
+           class="poll-link" target="_blank" rel="noopener">
+            <span class="poll-link-icon">&#128203;</span>
+            <span class="poll-link-text">
+                <strong>Пополнете го прашалникот</strong>
+                <small>Стратегии за жалба во академска комуникација</small>
+            </span>
+            <span class="poll-link-arrow">&#8599;</span>
+        </a>
+
+    </div>
+</section>
+
 {% endblock %}
