@@ -51,12 +51,12 @@
         </nav>
         <div class="header-actions">
             <div class="lang-dropdown" id="langDropdownWrap">
-                <button class="lang-toggle" id="langToggle">МК &#9660;</button>
+                <button class="lang-toggle" id="langToggle">MK &#9660;</button>
                 <ul class="lang-options" id="langOptions">
-                    <li data-lang="">МК</li>
-                    <li data-lang="en">EN</li>
-                    <li data-lang="sq">SQ</li>
-                    <li data-lang="de">DE</li>
+                    <li data-lang="">MK — Македонски</li>
+                    <li data-lang="en">EN — English</li>
+                    <li data-lang="sq">SQ — Shqip</li>
+                    <li data-lang="de">DE — Deutsch</li>
                 </ul>
             </div>
             <button class="menu-toggle" id="menuToggle">&#9776;</button>
@@ -87,6 +87,31 @@
     <img id="lbImg" src="" alt="">
     <button class="lightbox-nav lightbox-next" id="lbNext">&#8250;</button>
     <span class="lightbox-counter" id="lbCounter"></span>
+</div>
+
+<!-- ===== CHAT WIDGET ===== -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-panel" id="chatPanel">
+        <div class="chat-header">
+            <span class="chat-header-icon">🤖</span>
+            <div class="chat-header-text">
+                <strong>Асистент Лена</strong>
+            </div>
+            <button class="chat-minimize" id="chatMinimize" title="Минимизирај">&#8722;</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-msg bot">
+                <p>👋 Здраво! Јас сум Лена — слободно прашај за проектот!</p>
+            </div>
+            <div class="chat-msg bot">
+                <p>Можеш да прашаш за тимот, истражувањето, конференциите, материјалите или контакт информации.</p>
+            </div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chatInput" placeholder="Напишете прашање…" maxlength="500" autocomplete="off">
+            <button id="chatSend">&#10148;</button>
+        </div>
+    </div>
 </div>
 
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
