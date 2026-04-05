@@ -14,12 +14,32 @@ app = Flask(__name__)
 # and stripping HTML/Jinja tags so we get clean plain text.
 # ---------------------------------------------------------------------------
 
+def _expand_template_includes(raw: str, templates_dir: str, depth: int = 0) -> str:
+    if depth > 12:
+        return raw
+    pattern = re.compile(r"\{%\s*include\s+['\"]([^'\"]+)['\"]\s*%\}")
+
+    def repl(match):
+        rel = match.group(1).replace("/", os.sep)
+        inc_path = os.path.join(templates_dir, rel)
+        try:
+            with open(inc_path, encoding="utf-8") as inc_f:
+                inner = inc_f.read()
+        except OSError:
+            return ""
+        return _expand_template_includes(inner, templates_dir, depth + 1)
+
+    return pattern.sub(repl, raw)
+
+
 def _extract_template_text(template_name: str) -> str:
     """Read a template file and return only meaningful plain text lines."""
     try:
-        path = os.path.join(app.root_path, 'templates', template_name)
+        templates_dir = os.path.join(app.root_path, "templates")
+        path = os.path.join(templates_dir, template_name)
         with open(path, encoding='utf-8') as f:
             raw = f.read()
+        raw = _expand_template_includes(raw, templates_dir)
         # Remove Jinja2 tags
         raw = re.sub(r'\{%.*?%\}', ' ', raw, flags=re.DOTALL)
         raw = re.sub(r'\{\{.*?\}\}', ' ', raw, flags=re.DOTALL)
