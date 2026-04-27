@@ -1085,6 +1085,44 @@ body {
     .file-download { width: 100%; justify-content: center; }
 }
 
+/* ===== BOOK SHOWCASE (Materials) ===== */
+.book-showcase {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.book-cover-wrap {
+    flex: 0 0 auto;
+    max-width: min(280px, 100%);
+}
+.book-cover-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(13,34,68,0.12);
+}
+.book-details {
+    flex: 1;
+    min-width: min(100%, 260px);
+}
+.book-title-en {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+}
+.book-meta {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+@media (max-width: 640px) {
+    .book-showcase { flex-direction: column; align-items: center; text-align: center; }
+    .book-cover-wrap { max-width: 220px; }
+}
+
 /* ===== PAGE HERO (inner pages) ===== */
 .page-hero {
     background: var(--navy);
