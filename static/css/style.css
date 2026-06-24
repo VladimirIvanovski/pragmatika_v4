@@ -1123,6 +1123,29 @@ body {
     .book-cover-wrap { max-width: 220px; }
 }
 
+/* ===== MATERIALS SUBSECTION ===== */
+.materials-subsection {
+    margin-bottom: 0.5rem;
+    padding: 1.25rem 1.25rem 0.5rem;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--gold);
+    border-radius: var(--radius);
+    background: var(--off-white);
+}
+
+.materials-subsection .refs-group-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.materials-subsection-divider {
+    margin: 2rem 0 2.5rem;
+    border-top: 2px solid var(--navy-light);
+    opacity: 0.35;
+}
+
 /* ===== PAGE HERO (inner pages) ===== */
 .page-hero {
     background: var(--navy);
